@@ -8,14 +8,14 @@
 
     <EditText
         android:id="@+id/edit_email"
-        android:layout_width="323dp"
-        android:layout_height="49dp"
+        android:layout_width="359dp"
+        android:layout_height="43dp"
         android:background="#D9D9D9"
         android:ems="10"
         android:hint="exemplo@hotmail.com"
         android:inputType="textEmailAddress"
         android:textColorHint="#000000"
-        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="108dp" />
 
     <ImageView
@@ -32,8 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="e-mail"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="82dp" />
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="79dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="337dp"
@@ -44,5 +44,41 @@
         tools:layout_editor_absoluteY="1dp">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/id_nome_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="177dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="#d9d9d9"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <TextView
+        android:id="@+id/id_sobrenome_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sobrenome"
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="177dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword2"
+        android:layout_width="164dp"
+        android:layout_height="44dp"
+        android:background="#D9D9D9"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="212dp"
+        tools:layout_editor_absoluteY="203dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
