@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Tela_de_cadastro">
+    tools:context=".CadastroActivity">
 
     <EditText
         android:id="@+id/edit_email"
@@ -18,14 +18,7 @@
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="108dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="83dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icons8_user_50"
-        tools:layout_editor_absoluteX="302dp" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -36,13 +29,39 @@
         tools:layout_editor_absoluteY="82dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="337dp"
-        android:layout_height="76dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
         android:background="#D9D9D9"
-        android:scrollIndicators="end"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ellipse_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/arrow_1"
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="79dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
