@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NaRegua"
         tools:targetApi="31">
         <activity
+            android:name=".Tela_do_estabelecimento_lotado"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

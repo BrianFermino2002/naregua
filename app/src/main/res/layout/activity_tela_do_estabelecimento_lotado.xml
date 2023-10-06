@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tela_do_estabelecimento_lotado">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="104dp"
+        android:background="#D9D9D9"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do estabelecimento do cabeleleiro"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="43dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="60dp"
+            android:layout_height="37dp"
+            app:srcCompat="@drawable/arrow_1"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="37dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="379dp"
+        android:layout_height="154dp"
+        android:background="#8D8D8D"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="127dp"></LinearLayout>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço: < Endereço do estabelecimento >"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Corte 1"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dono: < nome do dono > "
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Próximo agendamento mais próximo: DIA / HORA"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informações do estabelecimento"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Corte 3"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Corte 2"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="460dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="460dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="314dp"
+        android:layout_height="126dp"
+        android:background="#CE000000"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="534dp">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desculpe pelo transtorno,"
+            android:textColor="#FFFFFF"
+            tools:layout_editor_absoluteX="69dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="263dp"
+            android:layout_height="34dp"
+            android:text="Não há horários disponiveis até o próximo   mês."
+            android:textColor="#FFFFFF"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="37dp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="289dp"
+            android:layout_height="34dp"
+            android:text="Mas horários podem ser liberados a qualquer momento"
+            android:textColor="#FFFFFF"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="71dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="279dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#D9D9D9"
+        android:text="Agendar"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="677dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$xx,xx"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="431dp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$xx,xx"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="463dp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$xx,xx"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="497dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
