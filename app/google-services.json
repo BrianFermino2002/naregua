@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "809538427919",
+    "project_id": "na-regua-48b5f",
+    "storage_bucket": "na-regua-48b5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809538427919:android:b0896a9ae0fd3d8d18177a",
+        "android_client_info": {
+          "package_name": "com.example.naregua"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzRpI_qA1o2A30Rt5iDtrOPHpV3zwkbls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
