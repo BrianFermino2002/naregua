@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/fragmentHomeUser">
+
+    <fragment
+        android:id="@+id/fragmentHomeUser"
+        android:name="com.example.naregua.FragmentHomeUser"
+        android:label="FragmentHomeUser"
+        tools:layout="@layout/fragment_home_user">
+        <action
+            android:id="@+id/action_fragmentHomeUser_to_fragmentPesquisa"
+            app:destination="@id/fragmentPesquisa" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPesquisa"
+        android:name="com.example.naregua.FragmentSearch"
+        android:label="FragmentSearch"
+        tools:layout="@layout/fragment_search"/>
+</navigation>

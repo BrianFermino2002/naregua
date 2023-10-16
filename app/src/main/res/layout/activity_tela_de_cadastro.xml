@@ -29,7 +29,9 @@
         <ImageButton
             android:layout_width="48dp"
             android:layout_height="48dp"
+            android:layout_marginStart="16dp"
             android:src="@drawable/arrow_1"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:contentDescription="voltar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -281,13 +283,13 @@
                 app:layout_constraintBottom_toBottomOf="@id/textView8"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="82dp" />
-    <!--Alinhar no começo do elemento anterior-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
