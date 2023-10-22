@@ -13,10 +13,26 @@
         <action
             android:id="@+id/action_fragmentHomeUser_to_fragmentPesquisa"
             app:destination="@id/fragmentPesquisa" />
+        <action
+            android:id="@+id/action_fragmentHomeUser_to_fragmentAgendamentos"
+            app:destination="@id/fragmentAgendamentos" />
+        <action
+            android:id="@+id/action_fragmentHomeUser_to_fragmentUser"
+            app:destination="@id/fragmentUser" />
     </fragment>
     <fragment
         android:id="@+id/fragmentPesquisa"
         android:name="com.example.naregua.FragmentSearch"
         android:label="FragmentSearch"
         tools:layout="@layout/fragment_search"/>
+    <fragment
+        android:id="@+id/fragmentAgendamentos"
+        android:name="com.example.naregua.FragmentAgendamentos"
+        android:label="FragmentAgendamentos"
+        tools:layout="@layout/fragment_agendamentos"/>
+    <fragment
+        android:id="@+id/fragmentUser"
+        android:name="com.example.naregua.FragmentUsuario"
+        android:label="FragmentUsuario"
+        tools:layout="@layout/fragment_usuario"/>
 </navigation>
