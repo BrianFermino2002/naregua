@@ -6,6 +6,11 @@
         <item name="backgroundTint">#D9D9D9</item>
     </style>
 
+    <style name="CustomCalendarView" parent="@android:style/Widget.CalendarView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">300dp</item>
+    </style>
+
     <style name="Base.Theme.NaRegua" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
