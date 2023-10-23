@@ -13,6 +13,9 @@
         android:theme="@style/Theme.NaRegua"
         tools:targetApi="31">
         <activity
+            android:name=".ConfirmacaoAgendamentoActivity"
+            android:exported="false" />
+        <activity
             android:name=".EstabelecimentoActivity"
             android:exported="false" />
         <activity
