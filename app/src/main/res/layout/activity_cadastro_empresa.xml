@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroEmpresaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#D9D9D9"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ellipse_1" />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/arrow_1"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:contentDescription="voltar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_imagem_emp"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                style="@style/CardView.Dark"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="16dp"
+                android:layout_marginBottom="16dp">
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_nome_emp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Nome da empresa"
+                app:layout_constraintTop_toBottomOf="@id/cv_imagem_emp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_nome_emp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite o nome da empresa"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nome_emp" />
+
+            <TextView
+                android:id="@+id/tv_nome_prop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Nome do proprietário"
+                app:layout_constraintTop_toBottomOf="@id/et_nome_emp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_nome_prop"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite o nome do proprietário"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nome_prop" />
+
+            <TextView
+                android:id="@+id/tv_cnpj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="CNPJ"
+                app:layout_constraintTop_toBottomOf="@id/et_nome_prop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_cnpj"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite o CNPJ da empresa"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cnpj" />
+
+            <TextView
+                android:id="@+id/tv_cep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="CEP"
+                app:layout_constraintTop_toBottomOf="@id/et_cnpj"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_cep"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite o CEP da empresa"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cep" />
+
+            <TextView
+                android:id="@+id/tv_logradouro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Endereço"
+                app:layout_constraintTop_toBottomOf="@id/et_cep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideline3"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_logradouro"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite o endereço"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/et_numero"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_logradouro" />
+
+            <TextView
+                android:id="@+id/tv_numero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Número"
+                app:layout_constraintStart_toStartOf="@id/et_numero"
+                app:layout_constraintTop_toBottomOf="@id/et_cep"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_numero"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="505B"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_logradouro" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Email"
+                app:layout_constraintTop_toBottomOf="@id/et_logradouro"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite um email"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+            <TextView
+                android:id="@+id/tv_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Senha"
+                app:layout_constraintTop_toBottomOf="@id/et_email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_senha"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite sua senha"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_senha" />
+
+            <TextView
+                android:id="@+id/tv_agencia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Agência"
+                app:layout_constraintTop_toBottomOf="@id/et_senha"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_agencia"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite a Agência"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_agencia" />
+
+            <TextView
+                android:id="@+id/tv_conta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Conta"
+                app:layout_constraintTop_toBottomOf="@id/et_senha"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/et_conta"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="Digite o número da C/C"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:background="#D9D9D9"
+                android:inputType="textEmailAddress"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_agencia" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginEnd="37dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#D9D9D9"
+                style="@style/buttonMainStyle"
+                android:textAllCaps="false"
+                android:text="Cadastrar Empresa"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_agencia" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="205dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="82dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
