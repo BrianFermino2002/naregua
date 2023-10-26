@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Na Regua</string>
+    <string name="vamos_realizar_analise">Vamos realizar uma análise das informações informadas para cadastrar sua empresa</string>
+    <string name="dias_email">Em alguns dias você receberá um email com o status do processamento</string>
+    <string name="dados_atualizados_todos">Os dados de sua empresa estão prestes a serem atualizados para todos os clientes</string>
+    <string name="agradecimento">Agradecemos sua preferência em utilizar a nossa aplicação, esperamos vê-lo(a) em breve</string>
 </resources>

@@ -10,5 +10,22 @@
         android:id="@+id/fragmentHomeEmp"
         android:name="com.example.naregua.FragmentHomeEmp"
         android:label="FragmentHomeEmp"
-        tools:layout="@layout/fragment_home_empresa"/>
+        tools:layout="@layout/fragment_home_empresa">
+        <action
+            android:id="@+id/action_fragmentHomeEmp_to_fragmentEstatisticas"
+            app:destination="@id/fragmentEstatisticas" />
+        <action
+            android:id="@+id/action_fragmentHomeEmp_to_fragmentEmpresa"
+            app:destination="@id/fragmentEmpresa" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEmpresa"
+        android:name="com.example.naregua.FragmentEmpresa"
+        android:label="FragmentEmpresa"
+        tools:layout="@layout/fragment_empresa"/>
+    <fragment
+        android:id="@+id/fragmentEstatisticas"
+        android:name="com.example.naregua.FragmentEstatisticas"
+        android:label="FragmentEstatisticas"
+        tools:layout="@layout/fragment_estatisticas"/>
 </navigation>
