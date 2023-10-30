@@ -4,10 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.naregua.databinding.ActivityMainBinding
+import com.example.naregua.dialogs.DialogEscolhaCadastrar
+import com.google.firebase.FirebaseApp
 
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private val binding by lazy{ ActivityMainBinding.inflate(layoutInflater)}
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -23,8 +26,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnCadastrar.setOnClickListener {
-            val intent = Intent(this, CadastroActivity::class.java)
-            startActivity(intent)
+            DialogEscolhaCadastrar.show(
+                title = "Deseja Cadastrar:",
+                fragmentManager = supportFragmentManager
+            )
         }
+
     }
 }
