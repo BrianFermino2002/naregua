@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.example.naregua.databinding.ActivityTelaDeCadastroBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -25,7 +26,9 @@ class CadastroActivity : AppCompatActivity() {
         binding.ibVoltar.setOnClickListener {
             finish()
         }
+
         binding.button2.setOnClickListener {
+            binding.pbLoading.isVisible = true
             if(verificaDados()){
                 auth.createUserWithEmailAndPassword(binding.editEmail.text.toString(), binding.editTextTextPassword.text.toString())
                     .addOnCompleteListener (this){task ->
@@ -45,12 +48,25 @@ class CadastroActivity : AppCompatActivity() {
                             )
 
                             userRef.setValue(userData).addOnSuccessListener {
-                                Log.d("TAG", "dados salvos com sucesso")
-                                val intent = Intent(this, LoginActivity::class.java)
-                                startActivity(intent)
-                                finish()
-                            }
-                                .addOnFailureListener {
+                                user?.sendEmailVerification()
+                                    ?.addOnCompleteListener { emailVerificationTask ->
+                                        if (emailVerificationTask.isSuccessful) {
+                                            Log.d(
+                                                "TAG",
+                                                "E-mail de verificação enviado com sucesso"
+                                            )
+
+                                            val intent = Intent(this, LoginActivity::class.java)
+                                            startActivity(intent)
+                                            finish()
+                                        } else {
+                                            Log.e(
+                                                "TAG",
+                                                "Erro ao enviar e-mail de verificação: ${emailVerificationTask.exception?.message}"
+                                            )
+                                        }
+                                    }
+                            }.addOnFailureListener {
                                     Log.e("TAG", "Erro ao salvar dados do usuário: ${it.message}")
                             }
 

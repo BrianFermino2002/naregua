@@ -15,6 +15,7 @@ class FragmentHomeUser: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        binding = FragmentHomeUserBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

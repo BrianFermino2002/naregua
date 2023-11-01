@@ -27,6 +27,7 @@
             app:srcCompat="@drawable/ellipse_1" />
 
         <ImageButton
+            android:id="@+id/ib_voltar"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
@@ -48,20 +49,45 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_imagem_emp"
+            <ImageButton
+                android:id="@+id/ib_selecionefachada"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Adicionar imagem"
+                android:src="@drawable/icons8_mais_48_2"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:layout_constraintTop_toTopOf="@id/iv_selectimage"
+                app:layout_constraintBottom_toBottomOf="@id/iv_selectimage"
+                app:layout_constraintStart_toStartOf="@id/iv_selectimage"
+                app:layout_constraintEnd_toEndOf="@id/iv_selectimage"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/ib_selecionefachada"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textAlignment="center"
+                    android:text="Selecione uma imagem da sua fachada"
+                    android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/iv_selectimage"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                style="@style/CardView.Dark"
-                app:cardCornerRadius="16dp"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:visibility="invisible"
+                android:contentDescription="Enviar imagem Fachada"
+                android:scaleType="fitXY"
+                android:src="@drawable/thumb"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_margin="16dp"
-                android:layout_marginBottom="16dp">
-            </androidx.cardview.widget.CardView>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_nome_emp"
@@ -69,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:text="Nome da empresa"
-                app:layout_constraintTop_toBottomOf="@id/cv_imagem_emp"
+                app:layout_constraintTop_toBottomOf="@id/iv_selectimage"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="16dp"/>
