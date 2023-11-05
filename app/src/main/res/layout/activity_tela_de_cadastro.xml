@@ -24,7 +24,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ellipse_1" />
+            app:srcCompat="@drawable/logosemfundo" />
 
         <ImageButton
             android:id="@+id/ib_voltar"
