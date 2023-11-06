@@ -85,7 +85,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginEnd="37dp"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#D9D9D9"
+        android:backgroundTint="#05DBF2"
         style="@style/buttonMainStyle"
         android:textAllCaps="false"
         android:text="Cadastrar Serviço"
