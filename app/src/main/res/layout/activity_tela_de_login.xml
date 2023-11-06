@@ -8,15 +8,15 @@
 
     <ImageButton
         android:id="@+id/ib_voltar"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/arrow_1"
-        style="@style/Widget.Material3.Button.OutlinedButton"
         android:contentDescription="voltar"
+        android:src="@drawable/arrow_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"

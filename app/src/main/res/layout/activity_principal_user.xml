@@ -47,11 +47,12 @@
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
         android:layout_height="63dp"
-        app:menu="@menu/bottom_navigation_menu"
         app:backgroundTint="#05DBF2"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu"
+        tools:layout_editor_absoluteX="0dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
