@@ -82,6 +82,10 @@ class CadastroActivity : AppCompatActivity() {
                 Toast.makeText(this, "Ainda faltam campos a serem preenchidos", Toast.LENGTH_LONG).show()
             }
         }
+
+        binding.ibVoltar.setOnClickListener {
+            finish()
+        }
     }
 
     fun verificaDados(): Boolean{

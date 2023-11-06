@@ -24,6 +24,7 @@ class FragmentHomeUser : Fragment() {
     private var listaDeEmpresas: MutableList<CabeleireiroItemUser> = mutableListOf()
     private lateinit var binding: FragmentHomeUserBinding
     private val adapter by lazy { CabeleireirosAdapter() }
+    private var isListLoaded = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,12 +33,15 @@ class FragmentHomeUser : Fragment() {
     ): View {
         binding = FragmentHomeUserBinding.inflate(inflater, container, false)
         setupAdapter()
+
         return binding.root
     }
 
     override fun onResume() {
         super.onResume()
-        carregarList()
+        if (!isListLoaded) { // Verifica se a lista já foi carregada
+            carregarList()
+        }
     }
 
     private fun carregarList() {
@@ -66,6 +70,7 @@ class FragmentHomeUser : Fragment() {
                         if (itensCarregados == totalItens) {
                             adapter.submitList(listaDeEmpresas)
                             binding.pbLoading.isVisible = false
+                            isListLoaded = true
                         }
                     }.addOnFailureListener { exception ->
                         Log.e("TAG", "Erro ao obter URL da imagem: ${exception.message}")

@@ -38,6 +38,10 @@ class LoginActivity : AppCompatActivity() {
             }
 
         }
+
+        binding.ibVoltar.setOnClickListener {
+            finish()
+        }
     }
 
     fun verificaDados(): Boolean{

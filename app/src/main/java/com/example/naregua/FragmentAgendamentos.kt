@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.naregua.databinding.FragmentAgendamentosBinding
+import com.example.naregua.databinding.FragmentSearchBinding
 
 class FragmentAgendamentos: Fragment() {
     private lateinit var binding: FragmentAgendamentosBinding
@@ -15,6 +16,7 @@ class FragmentAgendamentos: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View{
+        binding = FragmentAgendamentosBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

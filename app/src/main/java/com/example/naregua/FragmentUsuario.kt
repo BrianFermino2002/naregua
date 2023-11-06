@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.naregua.databinding.FragmentSearchBinding
 import com.example.naregua.databinding.FragmentUsuarioBinding
 
 class FragmentUsuario: Fragment() {
@@ -15,6 +16,7 @@ class FragmentUsuario: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View{
+        binding = FragmentUsuarioBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

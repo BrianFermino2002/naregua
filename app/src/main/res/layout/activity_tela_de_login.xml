@@ -7,6 +7,7 @@
     tools:context=".LoginActivity">
 
     <ImageButton
+        android:id="@+id/ib_voltar"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"

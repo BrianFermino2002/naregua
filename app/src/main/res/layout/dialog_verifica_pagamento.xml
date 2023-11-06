@@ -29,6 +29,7 @@
             tools:layout_editor_absoluteY="17dp" />
 
         <TextView
+            android:id="@+id/tv_nomeEmp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -72,7 +73,7 @@
                 android:id="@+id/tv_status_pagamento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Pagamento Aprovado"
+                android:text="Pagamento Aprovado"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
@@ -82,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                tools:text="Agendamento Realizado com sucesso"
+                android:text="Agendamento Realizado com sucesso"
                 app:layout_constraintTop_toBottomOf="@id/tv_status_pagamento"
                 app:layout_constraintStart_toStartOf="parent"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -102,6 +103,7 @@
         app:layout_constraintStart_toStartOf="@id/cv_situacao"
         app:layout_constraintEnd_toEndOf="@id/cv_situacao"
         app:layout_constraintTop_toBottomOf="@id/cv_situacao"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
