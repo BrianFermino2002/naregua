@@ -11,8 +11,10 @@
         <item name="android:layout_height">300dp</item>
     </style>
 
-    <style name="Base.Theme.NaRegua" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.NaRegua" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="android:forceDarkAllowed">false</item>
+
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 

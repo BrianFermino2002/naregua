@@ -46,6 +46,7 @@ class ConfirmacaoAgendamentoActivity : AppCompatActivity() {
         }
 
         binding.btnAgendar.setOnClickListener {
+            binding.btnAgendar.isClickable = false
             var nomeEmp = ""
             val idUnico = UUID.randomUUID().toString()
             val userRef = database.getReference("users").child(agendamento.idUser).child("agendamentos").child(idUnico)

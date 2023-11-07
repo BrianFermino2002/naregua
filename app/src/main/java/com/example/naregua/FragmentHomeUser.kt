@@ -41,6 +41,8 @@ class FragmentHomeUser : Fragment() {
         super.onResume()
         if (!isListLoaded) { // Verifica se a lista já foi carregada
             carregarList()
+        }else{
+            binding.pbLoading.isVisible = false
         }
     }
 
