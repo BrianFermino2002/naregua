@@ -1,6 +1,7 @@
 package com.example.naregua
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import com.example.naregua.databinding.FragmentUsuarioBinding
 import com.example.naregua.dialogs.DialogAjuda
 import com.example.naregua.dialogs.DialogCadDeletado
 import com.example.naregua.dialogs.DialogInserirServicos
+import com.google.firebase.auth.FirebaseAuth
 
 class FragmentUsuario: Fragment() {
     private lateinit var binding: FragmentUsuarioBinding
@@ -21,6 +23,35 @@ class FragmentUsuario: Fragment() {
         savedInstanceState: Bundle?
     ): View{
         binding = FragmentUsuarioBinding.inflate(inflater, container, false)
+        val user = FirebaseAuth.getInstance().currentUser
+
+        val idUser = user?.uid
+        if(idUser != null){
+
+            binding.btnDeletacad.setTextColor(Color.WHITE)
+            binding.btnDeletacad.setBackgroundColor(Color.RED)
+            binding.btnDeletacad.isClickable = true
+            binding.btnEditardados.isClickable = true
+            binding.btnEditardados.setBackgroundColor(Color.parseColor("#05DBF2"))
+            binding.btnDeletacad.setOnClickListener {
+                DialogCadDeletado.show(
+                    title = "Seu Cadastro será deletado",
+                    fragmentManager = parentFragmentManager
+                )
+            }
+
+            binding.btnEditardados.setOnClickListener {
+                val intent = Intent(requireContext(), EditaDadosActivity::class.java)
+                startActivity(intent)
+            }
+
+        }else{
+            binding.btnDeletacad.setTextColor(Color.BLACK)
+            binding.btnDeletacad.setBackgroundColor(Color.GRAY)
+            binding.btnDeletacad.isClickable = false
+            binding.btnEditardados.isClickable = false
+            binding.btnEditardados.setBackgroundColor(Color.GRAY)
+        }
 
         binding.btnAjuda.setOnClickListener {
             DialogAjuda.show(
@@ -29,20 +60,10 @@ class FragmentUsuario: Fragment() {
             )
         }
 
-        binding.btnDeletacad.setOnClickListener {
-            DialogCadDeletado.show(
-                title = "Seu Cadastro será deletado",
-                fragmentManager = parentFragmentManager
-            )
-        }
-
         binding.btnSairapp.setOnClickListener {
             requireActivity().finishAffinity()
         }
-        binding.btnEditardados.setOnClickListener {
-            val intent = Intent(requireContext(), EditaDadosActivity::class.java)
-            startActivity(intent)
-        }
+
         return binding.root
     }
 }

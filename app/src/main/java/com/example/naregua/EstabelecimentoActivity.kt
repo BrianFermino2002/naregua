@@ -24,7 +24,7 @@ import java.util.Calendar
 import kotlin.time.Duration.Companion.days
 
 class EstabelecimentoActivity : AppCompatActivity() {
-    private lateinit var idUser: String
+    private var idUser: String? = null
     private val adapter by lazy { ServicosRBAdapter() }
     private var listaDeEmpresas: MutableList<Servico> = mutableListOf()
     private var valorTotal: Double = 0.0
@@ -40,7 +40,7 @@ class EstabelecimentoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         val user = FirebaseAuth.getInstance().currentUser
-        idUser = user?.uid!!
+        idUser = user?.uid
 
         id = intent.getStringExtra("id")!!
         ajeitaCalendario()
@@ -69,12 +69,17 @@ class EstabelecimentoActivity : AppCompatActivity() {
             }
         }
         binding.btnAgendar.setOnClickListener {
-            val listaServicos = obterItensSelecionados()
-            valorTotal = obterValorTotal()
+            if(idUser != null){
+                val listaServicos = obterItensSelecionados()
+                valorTotal = obterValorTotal()
 
-            val intent = Intent(this, ConfirmacaoAgendamentoActivity::class.java)
-            intent.putExtra("agend", Agendamento(idUser, id, valorTotal, listaServicos, dia, mes, ano, horario))
-            startActivity(intent)
+                val intent = Intent(this, ConfirmacaoAgendamentoActivity::class.java)
+                intent.putExtra("agend", Agendamento(idUser!!, id, valorTotal, listaServicos, dia, mes, ano, horario))
+                startActivity(intent)
+            } else{
+                Toast.makeText(this, "Faça login para ver o restante do aplicativo", Toast.LENGTH_LONG).show()
+            }
+
         }
     }
 

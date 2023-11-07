@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.naregua.databinding.ActivityMainBinding
 import com.example.naregua.dialogs.DialogEscolhaCadastrar
 import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        val user = FirebaseAuth.getInstance().currentUser
+        val idUser = user?.uid
+
+        if(idUser != null){
+            FirebaseAuth.getInstance().signOut()
+        }
         binding.btnSoucadastrado.setOnClickListener {
             val intent =  Intent(this, LoginActivity::class.java)
             startActivity(intent)
