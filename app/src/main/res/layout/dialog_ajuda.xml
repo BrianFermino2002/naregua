@@ -25,6 +25,7 @@
             app:srcCompat="@drawable/logosemfundo" />
 
         <ImageButton
+            android:id="@+id/iv_voltar"
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
